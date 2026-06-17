@@ -19,9 +19,9 @@ body
   padding: 0
   font-family: var(--font-family)
   background-color: $bg-page
-  min-width: 1920px
   min-height: 100vh
   color: $color-text
+  overflow-x: hidden
 
 a
   text-decoration: none
@@ -1164,3 +1164,415 @@ a
     text-align: center
     color: $color-muted
     align-self: end
+
+// ──────────────────────────────────────────────
+// Адаптив
+// ──────────────────────────────────────────────
+
+// Планшет
+@media (max-width: 1024px)
+  body
+    min-width: 0
+
+  .container
+    padding: 0 24px
+
+  .header__title
+    font-size: 30px
+
+  .hero
+    height: 280px
+
+  .locate .locate__grid
+    gap: 24px
+
+  .events .events__slider,
+  .blog .blog__grid,
+  .docs .docs__grid,
+  .directions .directions__grid
+    grid-template-columns: repeat(2, 1fr)
+
+  .contacts .contacts__grid
+    gap: 64px
+
+  // О компании / коллектив — компактнее на планшете
+  .about
+    padding: 0 0 40px
+
+  .about .about__card
+    padding: 28px 28px 36px
+
+  .about .about__title
+    font-size: 26px
+    margin-bottom: 22px
+
+  .about .about__text p
+    font-size: 14px
+    line-height: 160%
+
+  .team
+    padding: 32px 0 40px
+
+  .team .team__title
+    font-size: 26px
+    margin-bottom: 28px
+
+  .team .team__photo
+    margin-bottom: 32px
+
+  .requisites
+    padding: 22px 24px 26px
+
+  .requisites .requisites__title
+    font-size: 19px
+
+  .requisites .requisites__row
+    font-size: 14px
+
+  .tariffs .tariffs__col
+    padding: 0 28px
+
+  // Направления — баннер ниже, панель плотнее
+  .hero--directions
+    height: 340px
+
+  .directions .directions__bar
+    gap: 16px
+    margin-bottom: 32px
+
+  .directions .directions__filter
+    min-width: 0
+    gap: 12px
+    padding: 10px 16px
+    font-size: 14px
+
+  .footer .footer__inner
+    column-gap: 32px
+
+// Мобильный
+@media (max-width: 640px)
+  .container
+    padding: 0 16px
+
+  // Шапка: прячем большой заголовок по центру
+  .header
+    padding: 14px 0
+
+  .header__title
+    display: none
+
+  .header__logo
+    font-size: 16px
+    padding: 7px 14px
+
+  .burger
+    width: 42px
+    height: 42px
+
+  .hero
+    height: 180px
+
+  .hero--directions
+    height: 240px
+
+  // Направления — панель в один ряд, компактные пилюли
+  .directions
+    padding: 28px 0 40px
+
+  .directions .directions__bar
+    gap: 10px
+    margin-bottom: 24px
+
+  .directions .directions__filter
+    flex: 0 0 auto
+    min-width: 0
+    gap: 8px
+    padding: 8px 12px
+    font-size: 12px
+    border-radius: 16px
+
+  .directions .directions__filter svg
+    width: 16px
+    height: 11px
+
+  .directions .directions__title
+    flex: 1
+    text-align: center
+
+  .directions .directions__grid
+    gap: 18px
+
+  .directions .directions__dots
+    margin-top: 24px
+
+  .vacancy-card .vacancy-card__title
+    font-size: 16px
+
+  .vacancy-card .vacancy-card__text
+    padding: 14px 18px 20px
+    font-size: 13px
+
+  // Заголовки секций мельче
+  .corp .corp__title,
+  .tariffs .tariffs__title,
+  .events .events__title,
+  .contacts .contacts__title,
+  .blog .blog__title,
+  .docs .docs__title,
+  .directions .directions__title,
+  .trust .trust__title
+    font-size: 22px
+    letter-spacing: 0.01em
+    line-height: 1.25
+    overflow-wrap: break-word
+    margin-bottom: 28px
+
+  // О компании / коллектив — мобильная компоновка
+  .about
+    padding: 0 0 32px
+
+  .about .about__card
+    padding: 22px 16px 28px
+
+  .about .about__title
+    font-size: 20px
+    margin-bottom: 16px
+
+  .about .about__text
+    text-align: left
+
+  .about .about__text p
+    font-size: 13px
+    line-height: 155%
+    margin-bottom: 10px
+
+  .team
+    padding: 28px 0 32px
+
+  .team .team__title
+    font-size: 22px
+    margin-bottom: 22px
+
+  .team .team__photo
+    margin-bottom: 24px
+
+  .requisites
+    padding: 20px 16px 24px
+    border-radius: 12px
+
+  .requisites .requisites__title
+    font-size: 17px
+    margin-bottom: 14px
+
+  .requisites .requisites__row
+    font-size: 13px
+    margin-bottom: 10px
+
+  .corp
+    padding-top: 36px
+
+  // Аккордеон
+  .accordion__head
+    padding: 13px 16px
+    gap: 10px
+
+    &::before
+      width: 18px
+
+  .accordion__label
+    font-size: 14px
+
+  .accordion__text
+    padding: 14px 16px 18px
+    font-size: 13px
+
+  // FAQ — компактнее на телефоне
+  .faq
+    padding: 36px 0
+
+  .faq .accordion
+    gap: 12px
+
+  .faq .accordion__head
+    padding: 13px 16px
+
+  .faq .accordion__label
+    font-size: 14px
+
+  .faq .accordion__text
+    padding: 2px 16px 16px
+    font-size: 12px
+
+  // Блог — карточки ниже на мобильном
+  .blog
+    padding: 36px 0
+
+  .blog-card .blog-card__image
+    height: 200px
+
+  .blog-card .blog-card__caption
+    padding: 12px 16px
+    font-size: 14px
+
+  // Документы — крупнее текст для касания
+  .docs
+    padding: 36px 0
+
+  .doc-card .doc-card__text
+    padding: 14px 14px
+    font-size: 14px
+
+  .doc-card .doc-card__btn
+    padding: 11px
+    font-size: 15px
+
+  // Тарифы — в одну колонку, разделитель снизу
+  .tariffs
+    padding: 40px 0
+
+  .tariffs .tariffs__grid
+    grid-template-columns: 1fr
+
+  .tariffs .tariffs__col
+    padding: 0
+
+    &:first-child
+      border-right: none
+      border-bottom: 1px solid rgba(31, 42, 68, 0.18)
+      padding-bottom: 32px
+      margin-bottom: 32px
+
+  .tariffs .tariffs__col-title
+    margin-bottom: 28px
+
+  // Форма заявки
+  .corp-form
+    padding: 16px 0 48px
+
+  .form
+    padding: 28px 20px
+    border-radius: 16px
+
+  .form .form__title
+    font-size: 24px
+
+  .form .form__field
+    padding: 14px 18px
+    font-size: 15px
+
+  .form--corp .form__row
+    flex-direction: column
+    gap: 16px
+
+  .form .form__call
+    flex-direction: column
+    align-items: flex-start
+    gap: 10px
+
+  .form .form__call-phone
+    font-size: 20px
+
+  // Нам доверяют
+  .trust
+    padding: 16px 0 48px
+
+  // Прочие сетки — в одну колонку
+  .events .events__slider,
+  .blog .blog__grid,
+  .docs .docs__grid,
+  .directions .directions__grid
+    grid-template-columns: 1fr
+
+  // Контакты — столбиком
+  .contacts
+    padding: 40px 0
+
+  .contacts .contacts__grid
+    flex-direction: column
+    align-items: center
+    gap: 36px
+
+  // Карта и офис
+  .locate
+    padding: 16px 0 36px
+
+  .map .map__inner
+    min-height: 340px
+
+  .map .map__menu
+    gap: 0
+    padding: 8px 4px
+    max-height: calc(100% - 24px)
+
+  .map .map__menu-link
+    font-size: 12px
+    padding: 4px 12px
+    gap: 7px
+
+    &::before
+      width: 10px
+      height: 10px
+
+  .locate .office
+    flex-direction: column
+
+  .locate .office__photo
+    flex: 0 0 180px
+
+  .locate .office__info
+    padding: 22px 18px
+
+  .locate .office__title
+    font-size: 20px
+
+  .locate .office__row
+    font-size: 14px
+
+  // Контакты — иконки и бейджи переносятся
+  .contacts .contacts__apps
+    flex-wrap: wrap
+    justify-content: center
+
+  .contacts .contacts__socials
+    flex-wrap: wrap
+    justify-content: center
+
+  // Подвал — всё в одну колонку по центру
+  .footer
+    padding: 36px 0
+
+  .footer .footer__inner
+    grid-template-columns: 1fr
+    grid-template-areas: "center" "left" "right" "apps" "socials"
+    row-gap: 28px
+    justify-items: center
+    text-align: center
+
+  .footer .footer__nav
+    padding-top: 0
+
+    &--left,
+    &--right
+      align-items: center
+      text-align: center
+
+  .footer .footer__apps,
+  .footer .footer__socials
+    justify-content: center
+    align-self: center
+    flex-wrap: wrap
+
+// Узкие телефоны — пилюли фильтров только с иконкой
+@media (max-width: 400px)
+  .directions .directions__filter
+    padding: 8px 11px
+
+  .directions .directions__filter span
+    display: none
+
+  .directions .directions__filter svg
+    width: 18px
+    height: 12px
+
+  .directions .directions__title
+    font-size: 22px
