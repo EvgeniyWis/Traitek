@@ -1,0 +1,516 @@
+$bg-page: #ffffff
+$bg-dark: #1f2a44
+$bg-darker: #16203a
+$color-accent: #2f3e63
+$color-text: #1f2a44
+$color-text-light: #ffffff
+$color-muted: rgba(255, 255, 255, 0.7)
+$color-muted-dark: rgba(31, 42, 68, 0.6)
+$color-notice-bg: #fdf3e2
+$color-notice-border: #e6b566
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+  font-family: var(--font-family)
+  background-color: $bg-page
+  min-height: 100vh
+  color: $color-text
+
+a
+  text-decoration: none
+  color: inherit
+
+.container
+  width: 420px
+  max-width: 100%
+  margin: 0 auto
+  padding: 0 16px
+
+.header
+  padding: 16px 0
+  background-color: $bg-darker
+  position: relative
+  z-index: 10
+
+  .header__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.logo
+  display: flex
+  align-items: center
+  gap: 8px
+  font-family: var(--font5)
+  font-size: 20px
+  font-weight: 700
+  line-height: 138%
+  letter-spacing: 0.02em
+  color: $color-text-light
+
+  .logo__mark
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    border-radius: 6px
+    background: #3a4a72
+    color: $color-text-light
+
+  &--footer
+    font-size: 18px
+
+.burger
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 34px
+  height: 34px
+  border-radius: 6px
+  background: #3a4a72
+  border: none
+  color: $color-text-light
+  cursor: pointer
+  transition: background 0.2s
+
+  &:hover
+    background: #46598a
+
+.main
+  padding-bottom: 0
+
+.notice
+  padding: 16px 0
+
+  .notice__card
+    background: $color-notice-bg
+    border: 1.5px solid $color-notice-border
+    border-radius: 12px
+    padding: 16px 18px
+
+  .notice__title
+    margin: 0 0 6px
+    font-size: 14px
+    font-weight: 600
+    color: $color-text
+
+  .notice__text
+    margin: 0
+    font-size: 12px
+    font-weight: 400
+    line-height: 150%
+    color: $color-muted-dark
+
+.map
+  padding: 8px 0
+
+  .map__inner
+    position: relative
+    border-radius: 12px
+    overflow: hidden
+    height: 240px
+
+  .map__menu
+    position: absolute
+    top: 12px
+    left: 12px
+    z-index: 2
+    display: flex
+    flex-direction: column
+    gap: 2px
+    padding: 8px 4px
+    border-radius: 8px
+    background: rgba(31, 42, 68, 0.92)
+    max-height: 216px
+    overflow-y: auto
+
+  .map__menu-link
+    font-size: 11px
+    font-weight: 400
+    color: $color-muted
+    padding: 3px 10px
+    border-radius: 4px
+    transition: color 0.2s
+
+    &:hover
+      color: $color-text-light
+
+    &--active
+      color: $color-text-light
+      font-weight: 600
+
+  .map__canvas
+    width: 100%
+    height: 100%
+    background: linear-gradient(135deg, #e7ebe6 0%, #dfe6df 100%)
+
+  .office
+    display: flex
+    margin-top: 12px
+    border-radius: 12px
+    overflow: hidden
+    background: $bg-dark
+
+  .office__photo
+    flex: 0 0 130px
+    background: linear-gradient(160deg, #4a5a82 0%, #2f3e63 100%)
+
+  .office__info
+    flex: 1
+    padding: 14px 16px
+    color: $color-text-light
+
+  .office__title
+    margin: 0 0 10px
+    font-size: 14px
+    font-weight: 600
+
+  .office__row
+    margin: 0 0 4px
+    font-size: 12px
+    font-weight: 400
+    color: $color-muted
+
+  .office__route
+    display: inline-flex
+    align-items: center
+    gap: 6px
+    margin-top: 10px
+    font-size: 12px
+    font-weight: 500
+    color: $color-text-light
+
+  .office__route-icon
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 18px
+    height: 18px
+    border-radius: 4px
+    background: #ff3333
+    color: $color-text-light
+    font-weight: 700
+    font-size: 12px
+
+.form-section
+  padding: 24px 0
+
+  .form
+    background: $bg-dark
+    border-radius: 16px
+    padding: 28px 24px
+    display: flex
+    flex-direction: column
+    gap: 14px
+
+  .form__title
+    margin: 0 0 6px
+    text-align: center
+    font-size: 22px
+    font-weight: 600
+    color: $color-text-light
+
+  .form__field
+    width: 100%
+    padding: 14px 16px
+    border-radius: 24px
+    border: none
+    background: $color-text-light
+    color: $color-text
+    font-family: var(--font-family)
+    font-size: 14px
+    font-weight: 400
+    outline: none
+
+    &::placeholder
+      color: $color-muted-dark
+
+  .form__select
+    position: relative
+
+    .form__field--select
+      width: 100%
+      appearance: none
+      cursor: pointer
+      color: $color-muted-dark
+
+    .form__select-arrow
+      position: absolute
+      top: 50%
+      right: 18px
+      transform: translateY(-50%)
+      color: $color-text
+      pointer-events: none
+
+  .form__agree
+    display: flex
+    align-items: flex-start
+    gap: 8px
+    font-size: 11px
+    font-weight: 400
+    line-height: 140%
+    color: $color-muted
+
+  .form__checkbox
+    margin-top: 1px
+    accent-color: #ffffff
+
+  .form__submit
+    margin-top: 4px
+    padding: 14px 24px
+    border-radius: 24px
+    border: 1.5px solid $color-text-light
+    background: transparent
+    color: $color-text-light
+    font-family: var(--font-family)
+    font-size: 15px
+    font-weight: 500
+    cursor: pointer
+    transition: all 0.2s
+
+    &:hover
+      background: $color-text-light
+      color: $bg-dark
+
+  .form__call
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 8px
+
+  .form__call-text
+    margin: 0
+    font-size: 13px
+    font-weight: 500
+    line-height: 130%
+    color: $color-muted
+
+  .form__call-phone
+    font-size: 18px
+    font-weight: 700
+    color: $color-text-light
+
+.events
+  padding: 24px 0
+
+  .events__title
+    margin: 0 0 20px
+    text-align: center
+    font-size: 22px
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: $color-text
+
+  .events__slider
+    display: flex
+    gap: 12px
+    overflow-x: auto
+    padding-bottom: 4px
+
+  .events__dots
+    display: flex
+    justify-content: center
+    gap: 6px
+    margin-top: 16px
+
+  .events__dot
+    width: 7px
+    height: 7px
+    border-radius: 50%
+    background: rgba(31, 42, 68, 0.25)
+
+    &--active
+      background: $bg-dark
+
+.event-card
+  flex: 0 0 150px
+  border-radius: 12px
+  overflow: hidden
+  background: $bg-dark
+
+  .event-card__image
+    height: 90px
+    background-size: cover
+    background-position: center
+
+    &--1
+      background: linear-gradient(135deg, #5a3a82 0%, #2f3e63 100%)
+
+    &--2
+      background: linear-gradient(135deg, #824a4a 0%, #2f3e63 100%)
+
+    &--3
+      background: linear-gradient(135deg, #4a825a 0%, #2f3e63 100%)
+
+  .event-card__text
+    margin: 0
+    padding: 10px 12px
+    font-size: 11px
+    font-weight: 400
+    line-height: 130%
+    color: $color-muted
+
+.contacts
+  padding: 24px 0
+
+  .contacts__title
+    margin: 0 0 24px
+    text-align: center
+    font-size: 22px
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: $color-text
+
+  .contacts__grid
+    display: flex
+    justify-content: space-between
+    gap: 12px
+
+  .contacts__col
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 12px
+    text-align: center
+
+  .contacts__heading
+    margin: 0
+    font-size: 13px
+    font-weight: 600
+    color: $color-text
+
+  .contacts__socials
+    display: flex
+    gap: 8px
+
+  .contacts__phone
+    font-size: 14px
+    font-weight: 700
+    color: $color-text
+
+  .contacts__apps
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+.social-icon
+  width: 28px
+  height: 28px
+  border-radius: 50%
+  background: $bg-dark
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  color: $color-text-light
+  transition: background 0.2s
+
+  &:hover
+    background: $color-accent
+
+  &--dark
+    background: #3a4a72
+
+    &:hover
+      background: #46598a
+
+.store-badge
+  display: inline-flex
+  flex-direction: column
+  justify-content: center
+  padding: 6px 14px
+  border-radius: 8px
+  background: $bg-dark
+  color: $color-text-light
+  line-height: 1.1
+
+  .store-badge__caption
+    font-size: 8px
+    font-weight: 400
+    color: $color-muted
+
+  .store-badge__name
+    font-size: 12px
+    font-weight: 600
+
+  &--sm
+    padding: 5px 12px
+
+    .store-badge__name
+      font-size: 11px
+
+.footer
+  background: $bg-darker
+  padding: 28px 0
+  color: $color-text-light
+
+  .footer__inner
+    display: flex
+    flex-wrap: wrap
+    gap: 24px
+
+  .footer__brand
+    display: flex
+    flex-direction: column
+    gap: 14px
+
+  .footer__socials
+    display: flex
+    gap: 8px
+
+  .footer__nav,
+  .footer__contact
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+  .footer__col-title
+    margin: 0 0 4px
+    font-size: 13px
+    font-weight: 600
+    color: $color-text-light
+
+  .footer__link
+    font-size: 12px
+    font-weight: 400
+    color: $color-muted
+    transition: color 0.2s
+
+    &:hover
+      color: $color-text-light
+
+  .footer__phone
+    font-size: 15px
+    font-weight: 700
+    color: $color-text-light
+
+  .footer__apps
+    display: flex
+    flex-direction: column
+    gap: 8px
+    margin-top: 4px
+
+@media (max-width: 480px)
+  .container
+    padding: 0 14px
+
+  .form-section
+    .form
+      padding: 24px 18px
+
+  .contacts
+    .contacts__grid
+      flex-direction: column
+      align-items: center
+      gap: 24px
+
+  .footer
+    .footer__inner
+      flex-direction: column
+      gap: 20px

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ТРАЙТЭК</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="sass/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo">
+          <span class="logo__mark">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M3 4h18M3 12h18M3 20h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="logo__text">ТРАЙТЭК</span>
+        </a>
+
+        <button class="burger" type="button" aria-label="Меню">
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
+            <path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="notice">
+        <div class="container">
+          <div class="notice__card">
+            <p class="notice__title">Смена юридического адреса</p>
+            <p class="notice__text">
+              Уважаемые клиенты, обращаем внимание, что с 18 марта 2025 года
+              изменился юридический адрес для ООО «Трайтэк» — нг01.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="map">
+        <div class="container">
+          <div class="map__inner">
+            <div class="map__menu">
+              <a href="#" class="map__menu-link map__menu-link--active">Александровка</a>
+              <a href="#" class="map__menu-link">Владимир</a>
+              <a href="#" class="map__menu-link">Воронеж</a>
+              <a href="#" class="map__menu-link">Екатеринбург</a>
+              <a href="#" class="map__menu-link">Казань</a>
+              <a href="#" class="map__menu-link">Краснодар</a>
+              <a href="#" class="map__menu-link">Москва</a>
+              <a href="#" class="map__menu-link">Нижний Новгород</a>
+              <a href="#" class="map__menu-link">Пермь</a>
+              <a href="#" class="map__menu-link">Самара</a>
+              <a href="#" class="map__menu-link">Саратов</a>
+              <a href="#" class="map__menu-link">Сочи</a>
+              <a href="#" class="map__menu-link">Сургут</a>
+              <a href="#" class="map__menu-link">Уфа</a>
+              <a href="#" class="map__menu-link">Южно-Сахалинск</a>
+            </div>
+            <div class="map__canvas"></div>
+          </div>
+
+          <div class="office">
+            <div class="office__photo"></div>
+            <div class="office__info">
+              <p class="office__title">Краткие сведения офиса</p>
+              <p class="office__row">г. Александровка, Октябрьская, д. 8</p>
+              <p class="office__row">8(960)453-25-20</p>
+              <p class="office__row">ПН-ПТ 09:00-18:00</p>
+              <p class="office__row">СБ-ВС выходной</p>
+              <a href="#" class="office__route">
+                <span class="office__route-icon">Я</span>
+                как добраться
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="container">
+          <form class="form">
+            <h2 class="form__title">Оставить заявку</h2>
+
+            <input type="text" class="form__field" placeholder="Введите имя" />
+            <input type="text" class="form__field" placeholder="Введите фамилию" />
+            <input type="tel" class="form__field" placeholder="Введите номер телефона" />
+
+            <div class="form__select">
+              <select class="form__field form__field--select">
+                <option value="" selected disabled>Выберите город</option>
+                <option>Александровка</option>
+                <option>Москва</option>
+                <option>Казань</option>
+                <option>Воронеж</option>
+              </select>
+              <svg class="form__select-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <label class="form__agree">
+              <input type="checkbox" class="form__checkbox" />
+              <span>Соглашаюсь с правилами обработки персональных данных</span>
+            </label>
+
+            <button type="submit" class="form__submit">Отправить заявку</button>
+
+            <div class="form__call">
+              <p class="form__call-text">Возникли проблемы?<br />Позвоните нам:</p>
+              <a href="tel:88005555806" class="form__call-phone">8 800 5555 806</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="events">
+        <div class="container">
+          <h2 class="events__title">Последние события</h2>
+
+          <div class="events__slider">
+            <article class="event-card">
+              <div class="event-card__image event-card__image--1"></div>
+              <p class="event-card__text">Розыгрыш призов в нашем магазине</p>
+            </article>
+            <article class="event-card">
+              <div class="event-card__image event-card__image--2"></div>
+              <p class="event-card__text">Новогодний розыгрыш призов</p>
+            </article>
+            <article class="event-card">
+              <div class="event-card__image event-card__image--3"></div>
+              <p class="event-card__text">Новогодний розыгрыш призов x10</p>
+            </article>
+          </div>
+
+          <div class="events__dots">
+            <span class="events__dot events__dot--active"></span>
+            <span class="events__dot"></span>
+            <span class="events__dot"></span>
+            <span class="events__dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="container">
+          <h2 class="contacts__title">Контактная информация</h2>
+
+          <div class="contacts__grid">
+            <div class="contacts__col">
+              <p class="contacts__heading">Наши соц. сети</p>
+              <div class="contacts__socials">
+                <a href="#" class="social-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9.04 16.7l-.37 5.2c.53 0 .76-.23 1.04-.5l2.5-2.4 5.18 3.8c.95.52 1.63.25 1.88-.88L23.9 3.8c.31-1.4-.5-1.95-1.42-1.6L1.1 10.3c-1.37.53-1.35 1.3-.23 1.65l5.45 1.7L18.9 5.6c.6-.4 1.14-.18.7.22"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22 5.8a8.5 8.5 0 0 1-2.36.64 4.1 4.1 0 0 0 1.8-2.27 8.2 8.2 0 0 1-2.6 1 4.1 4.1 0 0 0-7 3.74A11.65 11.65 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.27 5.47A4 4 0 0 1 2.8 9.6v.05a4.1 4.1 0 0 0 3.3 4.02 4.1 4.1 0 0 1-1.86.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 2 18.28a11.6 11.6 0 0 0 6.29 1.84c7.55 0 11.67-6.25 11.67-11.67l-.01-.53A8.3 8.3 0 0 0 22 5.8z"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.55 7.3c-.12.52-.42.65-.85.4l-2.36-1.74-1.14 1.1c-.13.13-.24.24-.48.24l.17-2.43 4.42-3.99c.2-.17-.04-.27-.3-.1l-5.46 3.44-2.35-.74c-.51-.16-.52-.51.11-.76l9.18-3.54c.42-.16.8.1.66.76z"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="contacts__col">
+              <p class="contacts__heading">Номер телефона</p>
+              <a href="tel:88005555806" class="contacts__phone">8 800 5555 806</a>
+            </div>
+
+            <div class="contacts__col">
+              <p class="contacts__heading">Приложение</p>
+              <div class="contacts__apps">
+                <a href="#" class="store-badge">
+                  <span class="store-badge__caption">Доступно в</span>
+                  <span class="store-badge__name">Google Play</span>
+                </a>
+                <a href="#" class="store-badge">
+                  <span class="store-badge__caption">Доступно в</span>
+                  <span class="store-badge__name">App Store</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="logo logo--footer">
+            <span class="logo__mark">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M3 4h18M3 12h18M3 20h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="logo__text">ТРАЙТЭК</span>
+          </a>
+          <div class="footer__socials">
+            <a href="#" class="social-icon social-icon--dark">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.04 16.7l-.37 5.2c.53 0 .76-.23 1.04-.5l2.5-2.4 5.18 3.8c.95.52 1.63.25 1.88-.88L23.9 3.8c.31-1.4-.5-1.95-1.42-1.6L1.1 10.3c-1.37.53-1.35 1.3-.23 1.65l5.45 1.7L18.9 5.6c.6-.4 1.14-.18.7.22"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon social-icon--dark">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.55 7.3c-.12.52-.42.65-.85.4l-2.36-1.74-1.14 1.1c-.13.13-.24.24-.48.24l.17-2.43 4.42-3.99c.2-.17-.04-.27-.3-.1l-5.46 3.44-2.35-.74c-.51-.16-.52-.51.11-.76l9.18-3.54c.42-.16.8.1.66.76z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer__nav">
+          <p class="footer__col-title">Трайтэк:</p>
+          <a href="#" class="footer__link">Главная</a>
+          <a href="#" class="footer__link">Доставка</a>
+        </nav>
+
+        <nav class="footer__nav">
+          <p class="footer__col-title">Покупателям:</p>
+          <a href="#" class="footer__link">Каталог товаров</a>
+          <a href="#" class="footer__link">Оплата</a>
+        </nav>
+
+        <nav class="footer__nav">
+          <p class="footer__col-title">Компания:</p>
+          <a href="#" class="footer__link">Контакты</a>
+          <a href="#" class="footer__link">Вакансии</a>
+        </nav>
+
+        <div class="footer__contact">
+          <p class="footer__col-title">Свяжитесь с нами:</p>
+          <a href="tel:88005555806" class="footer__phone">8 800 5555 806</a>
+          <div class="footer__apps">
+            <a href="#" class="store-badge store-badge--sm">
+              <span class="store-badge__caption">Доступно в</span>
+              <span class="store-badge__name">Google Play</span>
+            </a>
+            <a href="#" class="store-badge store-badge--sm">
+              <span class="store-badge__caption">Доступно в</span>
+              <span class="store-badge__name">App Store</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
