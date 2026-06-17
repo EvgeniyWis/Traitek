@@ -1,0 +1,1578 @@
+$bg-page: #ffffff
+$bg-dark: #1f2a44
+$bg-darker: #16203a
+$color-accent: #2f3e63
+$color-text: #1f2a44
+$color-text-light: #ffffff
+$color-muted: rgba(255, 255, 255, 0.7)
+$color-muted-dark: rgba(31, 42, 68, 0.6)
+$color-notice-bg: #fdf3e2
+$color-notice-border: #e6b566
+$header-blue: #2b3f8f
+$max-width: 1320px
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+  font-family: var(--font-family)
+  background-color: $bg-page
+  min-height: 100vh
+  color: $color-text
+  overflow-x: hidden
+
+a
+  text-decoration: none
+  color: inherit
+
+.container
+  width: 100%
+  max-width: $max-width
+  margin: 0 auto
+  padding: 0 40px
+
+.header
+  padding: 18px 0
+  background-color: $header-blue
+  position: relative
+  z-index: 10
+
+  .header__inner
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 24px
+
+.header__logo
+  flex-shrink: 0
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  padding: 8px 18px
+  border-radius: 8px
+  background: $color-text-light
+  font-family: var(--font5)
+  font-size: 18px
+  font-weight: 800
+  letter-spacing: 0.04em
+  color: $header-blue
+
+.header__title
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  font-family: var(--font5)
+  font-size: 40px
+  font-weight: 800
+  letter-spacing: 0.06em
+  color: $color-text-light
+
+.logo
+  display: flex
+  align-items: center
+  gap: 10px
+  flex-shrink: 0
+  font-family: var(--font5)
+  font-size: 24px
+  font-weight: 700
+  line-height: 138%
+  letter-spacing: 0.02em
+  color: $color-text-light
+
+  .logo__mark
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 38px
+    height: 38px
+    border-radius: 8px
+    background: #3a4a72
+    color: $color-text-light
+
+  &--footer
+    font-size: 22px
+
+.burger
+  flex-shrink: 0
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 48px
+  height: 48px
+  border-radius: 8px
+  background: $color-text-light
+  border: none
+  color: $header-blue
+  cursor: pointer
+  transition: background 0.2s
+
+  &:hover
+    background: #e8ecf6
+
+.hero
+  position: relative
+  height: 360px
+  background-color: #3d6aa6
+  background-image: url("../assets/images/bg.png"), linear-gradient(120deg, #2b4a7a 0%, #3d6aa6 45%, #6f9ad1 100%)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+  .hero__overlay
+    position: absolute
+    inset: 0
+    background: linear-gradient(180deg, rgba(22, 32, 58, 0.15) 0%, rgba(22, 32, 58, 0.45) 100%)
+
+.main
+  padding-bottom: 0
+
+.about
+  padding: 0 0 56px
+
+  .about__photo
+    width: 100%
+
+  .about__photo-img
+    display: block
+    width: 100%
+    height: auto
+    border-radius: 0
+
+  .about__card
+    background: $bg-darker
+    padding: 40px 60px 56px
+    text-align: center
+
+  .about__title
+    margin: 0 0 32px
+    font-size: 32px
+    font-weight: 700
+    color: $color-text-light
+
+  .about__text
+    max-width: 1080px
+    margin: 0 auto
+    text-align: justify
+
+    p
+      margin: 0 0 8px
+      font-size: 15px
+      font-weight: 400
+      line-height: 170%
+      color: $color-muted
+
+      &:last-child
+        margin-bottom: 0
+
+.team
+  padding: 40px 0 56px
+
+  .team__title
+    margin: 0 0 36px
+    text-align: center
+    font-size: 32px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: $color-text
+
+  .team__photo
+    width: 100%
+    margin-bottom: 48px
+
+  .team__photo-img
+    display: block
+    width: 100%
+    height: auto
+
+.requisites
+  background: linear-gradient(180deg, #f4f6fa 0%, #e6eaf2 100%)
+  border: 1px solid rgba(31, 42, 68, 0.18)
+  border-radius: 14px
+  padding: 26px 34px 30px
+  text-align: center
+
+  .requisites__title
+    margin: 0 0 18px
+    font-size: 22px
+    font-weight: 700
+    color: $color-text
+
+  .requisites__row
+    margin: 0 0 12px
+    font-size: 15px
+    font-weight: 400
+    line-height: 130%
+    color: $color-text
+
+    &:last-child
+      margin-bottom: 0
+
+.notice
+  padding: 36px 0
+
+  .notice__card
+    background: $color-notice-bg
+    border: 1.5px solid $color-notice-border
+    border-radius: 16px
+    padding: 22px 34px
+    text-align: center
+
+  .notice__title
+    margin: 0 0 8px
+    font-size: 19px
+    font-weight: 700
+    color: $color-text
+
+  .notice__text
+    margin: 0
+    font-size: 15px
+    font-weight: 400
+    line-height: 160%
+    color: $color-muted-dark
+
+.locate
+  padding: 24px 0 48px
+
+  .locate__grid
+    display: flex
+    flex-direction: column
+    gap: 32px
+
+.map
+  display: flex
+  flex-direction: column
+
+  .map__inner
+    position: relative
+    border-radius: 16px
+    overflow: hidden
+    flex: 1
+    min-height: 460px
+
+  .map__menu
+    position: absolute
+    top: 16px
+    left: 16px
+    z-index: 2
+    display: flex
+    flex-direction: column
+    gap: 2px
+    padding: 12px 6px
+    border-radius: 12px
+    background: rgba(20, 28, 52, 0.95)
+    max-height: calc(100% - 32px)
+    overflow-y: auto
+
+  .map__menu-link
+    display: flex
+    align-items: center
+    gap: 10px
+    font-size: 14px
+    font-weight: 400
+    color: $color-muted
+    padding: 6px 16px
+    border-radius: 6px
+    white-space: nowrap
+    transition: color 0.2s
+
+    &::before
+      content: ""
+      flex-shrink: 0
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      border: 2px solid rgba(255, 255, 255, 0.6)
+      background: transparent
+
+    &:hover
+      color: $color-text-light
+
+    &--active
+      color: $color-text-light
+      font-weight: 600
+
+      &::before
+        border-color: $color-text-light
+        box-shadow: inset 0 0 0 3px $bg-darker
+        background: $color-text-light
+
+  .map__canvas
+    position: absolute
+    inset: 0
+    z-index: 0
+    background: url("../assets/images/карта.png") center/cover no-repeat, linear-gradient(135deg, #eef0ee 0%, #e3e7e2 100%)
+
+  .office
+    display: flex
+    margin-top: 20px
+    border-radius: 16px
+    overflow: hidden
+    background: $bg-dark
+
+  .office__photo
+    flex: 0 0 48%
+    min-height: 220px
+    background: url("../assets/images/фото_в_офисе.png") center/cover no-repeat, linear-gradient(160deg, #4a5a82 0%, #2f3e63 100%)
+
+  .office__info
+    flex: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding: 28px 32px
+    color: $color-text-light
+
+  .office__title
+    margin: 0 0 16px
+    font-size: 24px
+    font-weight: 700
+
+  .office__row
+    margin: 0 0 8px
+    font-size: 16px
+    font-weight: 400
+    color: $color-muted
+
+  .office__route
+    display: inline-flex
+    align-items: center
+    gap: 12px
+    margin-top: 18px
+    padding: 11px 26px
+    border-radius: 30px
+    background: $color-text-light
+    font-size: 16px
+    font-weight: 700
+    letter-spacing: 0.04em
+    color: $color-text
+    transition: box-shadow 0.2s
+
+    &:hover
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25)
+
+  .office__route-icon
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 24px
+    height: 24px
+    color: $color-text
+
+.form
+  align-self: stretch
+  background: $bg-dark
+  border-radius: 20px
+  padding: 44px 40px
+  display: flex
+  flex-direction: column
+  gap: 18px
+
+  .form__title
+    margin: 0 0 10px
+    text-align: center
+    font-size: 30px
+    font-weight: 600
+    color: $color-text-light
+
+  .form__field
+    width: 100%
+    padding: 18px 22px
+    border-radius: 30px
+    border: none
+    background: $color-text-light
+    color: $color-text
+    font-family: var(--font-family)
+    font-size: 16px
+    font-weight: 400
+    outline: none
+
+    &::placeholder
+      color: $color-muted-dark
+
+  .form__select
+    position: relative
+
+    .form__field--select
+      width: 100%
+      appearance: none
+      cursor: pointer
+      color: $color-muted-dark
+
+    .form__select-arrow
+      position: absolute
+      top: 50%
+      right: 24px
+      transform: translateY(-50%)
+      color: #2f6df6
+      pointer-events: none
+
+  .form__agree
+    display: flex
+    align-items: center
+    gap: 12px
+    font-size: 12px
+    font-weight: 400
+    line-height: 150%
+    color: $color-muted
+
+    u
+      text-decoration: underline
+
+  .form__checkbox
+    appearance: none
+    flex-shrink: 0
+    position: relative
+    width: 34px
+    height: 18px
+    border-radius: 20px
+    background: rgba(255, 255, 255, 0.25)
+    cursor: pointer
+    transition: background 0.2s
+
+    &::before
+      content: ""
+      position: absolute
+      top: 2px
+      left: 2px
+      width: 14px
+      height: 14px
+      border-radius: 50%
+      background: $color-text-light
+      transition: transform 0.2s
+
+    &:checked
+      background: #2f6df6
+
+      &::before
+        transform: translateX(16px)
+
+  .form__submit
+    margin-top: 6px
+    padding: 18px 28px
+    border-radius: 30px
+    border: 1.5px solid $color-text-light
+    background: transparent
+    color: $color-text-light
+    font-family: var(--font-family)
+    font-size: 17px
+    font-weight: 500
+    cursor: pointer
+    transition: all 0.2s
+
+    &:hover
+      background: $color-text-light
+      color: $bg-dark
+
+  .form__call
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 14px
+
+  .form__call-text
+    margin: 0
+    font-size: 15px
+    font-weight: 500
+    line-height: 140%
+    color: $color-muted
+
+  .form__call-phone
+    font-size: 24px
+    font-weight: 700
+    color: $color-text-light
+
+.events
+  padding: 56px 0
+
+  .events__title
+    margin: 0 0 36px
+    text-align: center
+    font-size: 32px
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: $color-text
+
+  .events__slider
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 28px
+
+  .events__dots
+    display: flex
+    justify-content: center
+    gap: 8px
+    margin-top: 28px
+
+  .events__dot
+    width: 9px
+    height: 9px
+    border-radius: 50%
+    background: rgba(31, 42, 68, 0.25)
+    cursor: pointer
+
+    &--active
+      background: $bg-dark
+
+.event-card
+  border-radius: 16px
+  overflow: hidden
+  background: $bg-dark
+
+  .event-card__image
+    height: 200px
+    background: url("../assets/images/событие.png") center/cover no-repeat
+
+  .event-card__text
+    margin: 0
+    padding: 18px 22px
+    font-size: 15px
+    font-weight: 400
+    line-height: 140%
+    color: $color-muted
+
+.contacts
+  padding: 56px 0
+
+  .contacts__title
+    margin: 0 0 40px
+    text-align: center
+    font-size: 32px
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: $color-text
+
+  .contacts__grid
+    display: flex
+    justify-content: center
+    gap: 120px
+
+  .contacts__col
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 18px
+    text-align: center
+
+  .contacts__heading
+    margin: 0
+    font-size: 18px
+    font-weight: 600
+    color: $color-text
+
+  .contacts__socials
+    display: flex
+    gap: 12px
+
+  .contacts__phone
+    font-size: 20px
+    font-weight: 700
+    color: $color-text
+
+  .contacts__apps
+    display: flex
+    flex-direction: row
+    gap: 12px
+
+.social-icon
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  background: $bg-dark
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  color: $color-text-light
+  transition: background 0.2s
+
+  &:hover
+    background: $color-accent
+
+  &--dark
+    background: #3a4a72
+
+    &:hover
+      background: #46598a
+
+.store-badge
+  display: inline-flex
+  align-items: center
+  gap: 10px
+  padding: 8px 16px
+  border-radius: 10px
+  background: $color-text-light
+  border: 1px solid #e3e6ee
+  color: $color-text
+  line-height: 1.1
+  transition: box-shadow 0.2s
+
+  &:hover
+    box-shadow: 0 4px 12px rgba(31, 42, 68, 0.18)
+
+  .store-badge__icon
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    color: $color-text
+
+  .store-badge__text
+    display: flex
+    flex-direction: column
+
+  .store-badge__caption
+    font-size: 9px
+    font-weight: 400
+    color: $color-muted-dark
+
+  .store-badge__name
+    font-size: 14px
+    font-weight: 700
+
+  &--sm
+    padding: 7px 14px
+
+    .store-badge__name
+      font-size: 13px
+
+.corp
+  padding: 56px 0 0
+
+  .corp__title
+    margin: 0 0 40px
+    text-align: center
+    font-size: 32px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: $color-text
+
+.accordion
+  display: flex
+  flex-direction: column
+  gap: 14px
+
+  .accordion__item
+    border: 1.5px solid #cfd8ee
+    border-radius: 8px
+    background: #eef2fb
+    overflow: hidden
+
+  .accordion__head
+    display: flex
+    align-items: center
+    gap: 16px
+    padding: 16px 24px
+    cursor: pointer
+    list-style: none
+    background: #dde6f8
+
+    &::-webkit-details-marker
+      display: none
+
+    &::before
+      content: ""
+      width: 28px
+      height: 2px
+      flex-shrink: 0
+      background: $color-text
+
+  .accordion__label
+    flex: 1
+    font-size: 16px
+    font-weight: 700
+    color: $color-text
+
+  .accordion__icon
+    flex-shrink: 0
+    display: inline-flex
+    color: $header-blue
+    transition: transform 0.2s
+
+  .accordion__item:not([open]) .accordion__icon
+    transform: rotate(180deg)
+
+  .accordion__text
+    margin: 0
+    padding: 18px 24px 22px
+    font-size: 14px
+    font-weight: 400
+    line-height: 160%
+    color: $color-muted-dark
+
+.tariffs
+  padding: 64px 0
+
+  .tariffs__title
+    margin: 0 0 44px
+    text-align: center
+    font-size: 32px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: $color-text
+
+  .tariffs__grid
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 0
+
+  .tariffs__col
+    padding: 0 56px
+
+    &:first-child
+      border-right: 1px solid rgba(31, 42, 68, 0.18)
+
+  .tariffs__col-title
+    margin: 0 0 40px
+    text-align: center
+    font-size: 22px
+    font-weight: 700
+    color: $color-text
+
+.tariff
+  margin-bottom: 36px
+
+  .tariff__name
+    margin: 0 0 6px
+    font-size: 15px
+    font-weight: 700
+    color: $color-text
+
+  .tariff__desc
+    margin: 0 0 12px
+    font-size: 14px
+    font-weight: 400
+    line-height: 150%
+    color: $color-muted-dark
+
+  .tariff__price
+    margin: 0 0 12px
+    font-size: 14px
+    font-weight: 600
+    color: $color-text
+
+  .tariff__list
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+  .tariff__item
+    display: flex
+    align-items: flex-start
+    gap: 8px
+    font-size: 14px
+    font-weight: 400
+    color: $color-muted-dark
+
+    &::before
+      content: "✓"
+      flex-shrink: 0
+      color: $color-text
+      font-weight: 700
+
+.corp-form
+  padding: 24px 0 64px
+
+  .form--corp
+    width: 100%
+
+  .form__row
+    display: flex
+    gap: 16px
+
+    .form__field
+      flex: 1
+
+.trust
+  padding: 24px 0 64px
+
+  .trust__title
+    margin: 0 0 40px
+    text-align: center
+    font-size: 28px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: $color-text
+
+  .trust__slider
+    display: flex
+    justify-content: center
+
+  .trust__img
+    display: block
+    width: 100%
+    height: auto
+
+  .trust__dots
+    display: flex
+    justify-content: center
+    gap: 8px
+    margin-top: 28px
+
+  .trust__dot
+    width: 9px
+    height: 9px
+    border-radius: 50%
+    background: rgba(31, 42, 68, 0.25)
+    cursor: pointer
+
+    &--active
+      background: $bg-dark
+
+.blog
+  padding: 56px 0
+
+  .blog__grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 28px
+
+.blog-card
+  position: relative
+  display: block
+  border-radius: 16px
+  overflow: hidden
+  background: $bg-dark
+
+  .blog-card__image
+    display: block
+    width: 100%
+    height: 240px
+    object-fit: cover
+
+  .blog-card__caption
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 16px 22px
+    background: rgba(22, 32, 58, 0.9)
+    font-size: 15px
+    font-weight: 500
+    line-height: 140%
+    color: $color-text-light
+
+.docs
+  padding: 56px 0
+
+  .docs__title
+    margin: 0 0 40px
+    text-align: center
+    font-size: 32px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.04em
+    color: $color-text
+
+  .docs__grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 18px 20px
+    align-items: start
+
+.doc-card
+  display: block
+  border: 1px solid $color-accent
+  border-radius: 2px
+  overflow: hidden
+  background: $color-text-light
+
+  .doc-card__text
+    margin: 0
+    padding: 12px 14px
+    text-align: center
+    font-size: 13px
+    font-weight: 400
+    line-height: 135%
+    color: $color-text
+
+  .doc-card__btn
+    display: block
+    padding: 9px
+    text-align: center
+    background: #3a4a72
+    font-size: 15px
+    font-weight: 700
+    color: $color-text-light
+    transition: background 0.2s
+
+    &:hover
+      background: #46598a
+
+.faq
+  padding: 56px 0
+
+  .faq__title
+    margin: 0 0 28px
+    text-align: center
+    font-size: 26px
+    font-weight: 700
+    color: $color-text
+
+  .accordion
+    gap: 16px
+
+  .accordion__item
+    border: 1.5px solid #c3cde2
+    border-radius: 8px
+    background: #e9eef8
+
+  .accordion__head
+    background: #e9eef8
+    padding: 16px 24px
+
+    &::before
+      display: none
+
+  .accordion__label
+    font-size: 17px
+    font-weight: 700
+    color: $color-text
+
+  .accordion__icon
+    color: $color-text
+
+  .accordion__text
+    padding: 4px 24px 22px
+    text-align: center
+    max-width: 760px
+    margin: 0 auto
+    font-size: 13px
+    line-height: 165%
+    color: $color-muted-dark
+
+.footer
+  background: $bg-darker
+  padding: 44px 0
+  color: $color-text-light
+
+  .footer__inner
+    display: grid
+    grid-template-columns: 1fr auto 1fr
+    grid-template-areas: "left center right" "socials center apps"
+    column-gap: 60px
+    row-gap: 36px
+    align-items: start
+
+  .footer__nav
+    display: flex
+    flex-direction: column
+    gap: 14px
+    padding-top: 8px
+
+    &--left
+      grid-area: left
+      align-items: flex-start
+
+    &--right
+      grid-area: right
+      align-items: flex-end
+      text-align: right
+
+  .footer__center
+    grid-area: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    gap: 10px
+
+  .footer__col-title
+    margin: 0
+    font-size: 18px
+    font-weight: 700
+    color: $color-text-light
+
+    &--mt
+      margin-top: 10px
+
+  .footer__link
+    font-size: 15px
+    font-weight: 400
+    color: $color-muted
+    transition: color 0.2s
+
+    &:hover
+      color: $color-text-light
+
+    &--light
+      color: $color-text-light
+
+  .footer__phone
+    font-size: 20px
+    font-weight: 700
+    color: $color-text-light
+
+  .footer__socials
+    grid-area: socials
+    display: flex
+    gap: 12px
+    align-self: end
+
+  .footer__apps
+    grid-area: apps
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    gap: 12px
+
+.hero--directions
+  height: 500px
+  background-image: url("../assets/images/сергей.png"), linear-gradient(120deg, #2b4a7a 0%, #3d6aa6 45%, #6f9ad1 100%)
+
+.directions
+  padding: 40px 0 56px
+
+  .directions__bar
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 24px
+    margin-bottom: 40px
+
+  .directions__title
+    margin: 0
+    font-size: 30px
+    font-weight: 700
+    color: $color-text
+
+  .directions__filter
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    gap: 18px
+    min-width: 200px
+    padding: 11px 18px
+    border: none
+    border-radius: 20px
+    background: $bg-dark
+    color: $color-text-light
+    font-family: var(--font-family)
+    font-size: 15px
+    font-weight: 600
+    cursor: pointer
+
+  .directions__grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 28px
+
+  .directions__dots
+    display: flex
+    justify-content: center
+    gap: 10px
+    margin-top: 36px
+
+  .directions__dot
+    width: 11px
+    height: 11px
+    border-radius: 50%
+    background: rgba(31, 42, 68, 0.25)
+    cursor: pointer
+
+    &--active
+      background: $bg-dark
+
+.vacancy-card
+  border-radius: 16px
+  overflow: hidden
+  background: $bg-dark
+  display: flex
+  flex-direction: column
+
+  .vacancy-card__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 12px
+    padding: 14px 20px
+
+  .vacancy-card__title
+    margin: 0
+    font-size: 17px
+    font-weight: 700
+    color: $color-text-light
+
+  .vacancy-card__toggle
+    flex-shrink: 0
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 26px
+    height: 26px
+    border-radius: 50%
+    border: 1px solid $color-muted
+    color: $color-muted
+
+  .vacancy-card__image
+    position: relative
+    height: 150px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+    &--1
+      background-image: url("../assets/images/фото_в_офисе.png")
+
+    &--2
+      background-image: url("../assets/images/коллектив.png")
+
+    &--3
+      background-image: url("../assets/images/событие.png")
+
+    &--4
+      background-image: url("../assets/images/фото_для_блока.png")
+
+    &--5
+      background-image: url("../assets/images/карьера_блок.png")
+
+    &--6
+      background-image: url("../assets/images/сергей.png")
+
+  .vacancy-card__badge
+    position: absolute
+    left: 14px
+    bottom: 14px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    border-radius: 8px
+    background: $color-text-light
+    color: $color-accent
+    font-size: 18px
+    font-weight: 800
+
+  .vacancy-card__text
+    margin: 0
+    padding: 18px 22px 24px
+    font-size: 14px
+    font-weight: 400
+    line-height: 150%
+    text-align: center
+    color: $color-muted
+    align-self: end
+
+// ──────────────────────────────────────────────
+// Адаптив
+// ──────────────────────────────────────────────
+
+// Планшет
+@media (max-width: 1024px)
+  body
+    min-width: 0
+
+  .container
+    padding: 0 24px
+
+  .header__title
+    font-size: 30px
+
+  .hero
+    height: 280px
+
+  .locate .locate__grid
+    gap: 24px
+
+  .events .events__slider,
+  .blog .blog__grid,
+  .docs .docs__grid,
+  .directions .directions__grid
+    grid-template-columns: repeat(2, 1fr)
+
+  .contacts .contacts__grid
+    gap: 64px
+
+  // О компании / коллектив — компактнее на планшете
+  .about
+    padding: 0 0 40px
+
+  .about .about__card
+    padding: 28px 28px 36px
+
+  .about .about__title
+    font-size: 26px
+    margin-bottom: 22px
+
+  .about .about__text p
+    font-size: 14px
+    line-height: 160%
+
+  .team
+    padding: 32px 0 40px
+
+  .team .team__title
+    font-size: 26px
+    margin-bottom: 28px
+
+  .team .team__photo
+    margin-bottom: 32px
+
+  .requisites
+    padding: 22px 24px 26px
+
+  .requisites .requisites__title
+    font-size: 19px
+
+  .requisites .requisites__row
+    font-size: 14px
+
+  .tariffs .tariffs__col
+    padding: 0 28px
+
+  // Направления — баннер ниже, панель плотнее
+  .hero--directions
+    height: 340px
+
+  .directions .directions__bar
+    gap: 16px
+    margin-bottom: 32px
+
+  .directions .directions__filter
+    min-width: 0
+    gap: 12px
+    padding: 10px 16px
+    font-size: 14px
+
+  .footer .footer__inner
+    column-gap: 32px
+
+// Мобильный
+@media (max-width: 640px)
+  .container
+    padding: 0 16px
+
+  // Шапка: прячем большой заголовок по центру
+  .header
+    padding: 14px 0
+
+  .header__title
+    display: none
+
+  .header__logo
+    font-size: 16px
+    padding: 7px 14px
+
+  .burger
+    width: 42px
+    height: 42px
+
+  .hero
+    height: 180px
+
+  .hero--directions
+    height: 240px
+
+  // Направления — панель в один ряд, компактные пилюли
+  .directions
+    padding: 28px 0 40px
+
+  .directions .directions__bar
+    gap: 10px
+    margin-bottom: 24px
+
+  .directions .directions__filter
+    flex: 0 0 auto
+    min-width: 0
+    gap: 8px
+    padding: 8px 12px
+    font-size: 12px
+    border-radius: 16px
+
+  .directions .directions__filter svg
+    width: 16px
+    height: 11px
+
+  .directions .directions__title
+    flex: 1
+    text-align: center
+
+  .directions .directions__grid
+    gap: 18px
+
+  .directions .directions__dots
+    margin-top: 24px
+
+  .vacancy-card .vacancy-card__title
+    font-size: 16px
+
+  .vacancy-card .vacancy-card__text
+    padding: 14px 18px 20px
+    font-size: 13px
+
+  // Заголовки секций мельче
+  .corp .corp__title,
+  .tariffs .tariffs__title,
+  .events .events__title,
+  .contacts .contacts__title,
+  .blog .blog__title,
+  .docs .docs__title,
+  .directions .directions__title,
+  .trust .trust__title
+    font-size: 22px
+    letter-spacing: 0.01em
+    line-height: 1.25
+    overflow-wrap: break-word
+    margin-bottom: 28px
+
+  // О компании / коллектив — мобильная компоновка
+  .about
+    padding: 0 0 32px
+
+  .about .about__card
+    padding: 22px 16px 28px
+
+  .about .about__title
+    font-size: 20px
+    margin-bottom: 16px
+
+  .about .about__text
+    text-align: left
+
+  .about .about__text p
+    font-size: 13px
+    line-height: 155%
+    margin-bottom: 10px
+
+  .team
+    padding: 28px 0 32px
+
+  .team .team__title
+    font-size: 22px
+    margin-bottom: 22px
+
+  .team .team__photo
+    margin-bottom: 24px
+
+  .requisites
+    padding: 20px 16px 24px
+    border-radius: 12px
+
+  .requisites .requisites__title
+    font-size: 17px
+    margin-bottom: 14px
+
+  .requisites .requisites__row
+    font-size: 13px
+    margin-bottom: 10px
+
+  .corp
+    padding-top: 36px
+
+  // Аккордеон
+  .accordion__head
+    padding: 13px 16px
+    gap: 10px
+
+    &::before
+      width: 18px
+
+  .accordion__label
+    font-size: 14px
+
+  .accordion__text
+    padding: 14px 16px 18px
+    font-size: 13px
+
+  // FAQ — компактнее на телефоне
+  .faq
+    padding: 36px 0
+
+  .faq .accordion
+    gap: 12px
+
+  .faq .accordion__head
+    padding: 13px 16px
+
+  .faq .accordion__label
+    font-size: 14px
+
+  .faq .accordion__text
+    padding: 2px 16px 16px
+    font-size: 12px
+
+  // Блог — карточки ниже на мобильном
+  .blog
+    padding: 36px 0
+
+  .blog-card .blog-card__image
+    height: 200px
+
+  .blog-card .blog-card__caption
+    padding: 12px 16px
+    font-size: 14px
+
+  // Документы — крупнее текст для касания
+  .docs
+    padding: 36px 0
+
+  .doc-card .doc-card__text
+    padding: 14px 14px
+    font-size: 14px
+
+  .doc-card .doc-card__btn
+    padding: 11px
+    font-size: 15px
+
+  // Тарифы — в одну колонку, разделитель снизу
+  .tariffs
+    padding: 40px 0
+
+  .tariffs .tariffs__grid
+    grid-template-columns: 1fr
+
+  .tariffs .tariffs__col
+    padding: 0
+
+    &:first-child
+      border-right: none
+      border-bottom: 1px solid rgba(31, 42, 68, 0.18)
+      padding-bottom: 32px
+      margin-bottom: 32px
+
+  .tariffs .tariffs__col-title
+    margin-bottom: 28px
+
+  // Форма заявки
+  .corp-form
+    padding: 16px 0 48px
+
+  .form
+    padding: 28px 20px
+    border-radius: 16px
+
+  .form .form__title
+    font-size: 24px
+
+  .form .form__field
+    padding: 14px 18px
+    font-size: 15px
+
+  .form--corp .form__row
+    flex-direction: column
+    gap: 16px
+
+  .form .form__call
+    flex-direction: column
+    align-items: flex-start
+    gap: 10px
+
+  .form .form__call-phone
+    font-size: 20px
+
+  // Нам доверяют
+  .trust
+    padding: 16px 0 48px
+
+  // Прочие сетки — в одну колонку
+  .events .events__slider,
+  .blog .blog__grid,
+  .docs .docs__grid,
+  .directions .directions__grid
+    grid-template-columns: 1fr
+
+  // Контакты — столбиком
+  .contacts
+    padding: 40px 0
+
+  .contacts .contacts__grid
+    flex-direction: column
+    align-items: center
+    gap: 36px
+
+  // Карта и офис
+  .locate
+    padding: 16px 0 36px
+
+  .map .map__inner
+    min-height: 340px
+
+  .map .map__menu
+    gap: 0
+    padding: 8px 4px
+    max-height: calc(100% - 24px)
+
+  .map .map__menu-link
+    font-size: 12px
+    padding: 4px 12px
+    gap: 7px
+
+    &::before
+      width: 10px
+      height: 10px
+
+  .locate .office
+    flex-direction: column
+
+  .locate .office__photo
+    flex: 0 0 180px
+
+  .locate .office__info
+    padding: 22px 18px
+
+  .locate .office__title
+    font-size: 20px
+
+  .locate .office__row
+    font-size: 14px
+
+  // Контакты — иконки и бейджи переносятся
+  .contacts .contacts__apps
+    flex-wrap: wrap
+    justify-content: center
+
+  .contacts .contacts__socials
+    flex-wrap: wrap
+    justify-content: center
+
+  // Подвал — всё в одну колонку по центру
+  .footer
+    padding: 36px 0
+
+  .footer .footer__inner
+    grid-template-columns: 1fr
+    grid-template-areas: "center" "left" "right" "apps" "socials"
+    row-gap: 28px
+    justify-items: center
+    text-align: center
+
+  .footer .footer__nav
+    padding-top: 0
+
+    &--left,
+    &--right
+      align-items: center
+      text-align: center
+
+  .footer .footer__apps,
+  .footer .footer__socials
+    justify-content: center
+    align-self: center
+    flex-wrap: wrap
+
+// Узкие телефоны — пилюли фильтров только с иконкой
+@media (max-width: 400px)
+  .directions .directions__filter
+    padding: 8px 11px
+
+  .directions .directions__filter span
+    display: none
+
+  .directions .directions__filter svg
+    width: 18px
+    height: 12px
+
+  .directions .directions__title
+    font-size: 22px
